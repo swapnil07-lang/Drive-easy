@@ -168,15 +168,13 @@ if (document.querySelector('.stats-section')) {
     }
 }
 
-// Load Featured Cars on Homepage
+// Load Featured Cars on Homepage with Carousel
 function loadFeaturedCars() {
-    const featuredGrid = document.getElementById('featuredCars');
-    if (!featuredGrid) return;
+    const featuredCarousel = document.getElementById('featuredCars');
+    if (!featuredCarousel) return;
 
-    // Show first 3 cars as featured
-    const featuredCars = cars.slice(0, 3);
-
-    featuredGrid.innerHTML = featuredCars.map(car => `
+    // Show all 6 cars in carousel
+    featuredCarousel.innerHTML = cars.map(car => `
         <div class="car-card">
             <div class="car-image">
                 <img src="${car.image}" alt="${car.name}" />
@@ -196,6 +194,81 @@ function loadFeaturedCars() {
             </div>
         </div>
     `).join('');
+
+    // Initialize carousel
+    initCarousel();
+}
+
+// Carousel functionality
+function initCarousel() {
+    const carousel = document.getElementById('featuredCars');
+    const prevBtn = document.getElementById('carouselPrev');
+    const nextBtn = document.getElementById('carouselNext');
+    const dotsContainer = document.getElementById('carouselDots');
+
+    if (!carousel || !prevBtn || !nextBtn) return;
+
+    const cards = carousel.querySelectorAll('.car-card');
+    const cardWidth = 340 + 32; // card width + gap
+    let currentIndex = 0;
+    let autoScrollInterval;
+
+    // Create dots
+    cards.forEach((_, index) => {
+        const dot = document.createElement('div');
+        dot.classList.add('carousel-dot');
+        if (index === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => scrollToIndex(index));
+        dotsContainer.appendChild(dot);
+    });
+
+    const dots = dotsContainer.querySelectorAll('.carousel-dot');
+
+    function updateDots() {
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentIndex);
+        });
+    }
+
+    function scrollToIndex(index) {
+        currentIndex = index;
+        carousel.scrollTo({
+            left: cardWidth * index,
+            behavior: 'smooth'
+        });
+        updateDots();
+        resetAutoScroll();
+    }
+
+    function scrollNext() {
+        currentIndex = (currentIndex + 1) % cards.length;
+        scrollToIndex(currentIndex);
+    }
+
+    function scrollPrev() {
+        currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+        scrollToIndex(currentIndex);
+    }
+
+    function startAutoScroll() {
+        autoScrollInterval = setInterval(scrollNext, 4000); // Auto-scroll every 4 seconds
+    }
+
+    function resetAutoScroll() {
+        clearInterval(autoScrollInterval);
+        startAutoScroll();
+    }
+
+    // Event listeners
+    prevBtn.addEventListener('click', scrollPrev);
+    nextBtn.addEventListener('click', scrollNext);
+
+    // Pause auto-scroll on hover
+    carousel.addEventListener('mouseenter', () => clearInterval(autoScrollInterval));
+    carousel.addEventListener('mouseleave', startAutoScroll);
+
+    // Start auto-scroll
+    startAutoScroll();
 }
 
 // Load Premium Luxury Cars on Homepage

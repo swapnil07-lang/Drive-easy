@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>DriveEasy - Home</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="carousel.css" />
 </head>
 
 <body>
@@ -70,12 +71,23 @@
     </div>
   </section>
 
-  <!-- Featured Cars Section -->
+  <!-- Featured Cars Section with Carousel -->
   <section class="featured-cars-section">
     <div class="container">
       <h2>Featured Cars</h2>
       <p class="section-subtitle">Explore our most popular vehicles</p>
-      <div class="featured-cars-grid" id="featuredCars">
+      <div class="carousel-container">
+        <button class="carousel-btn carousel-btn-prev" id="carouselPrev">
+          <span>‹</span>
+        </button>
+        <div class="featured-cars-carousel" id="featuredCars">
+          <!-- Will be populated by JavaScript -->
+        </div>
+        <button class="carousel-btn carousel-btn-next" id="carouselNext">
+          <span>›</span>
+        </button>
+      </div>
+      <div class="carousel-dots" id="carouselDots">
         <!-- Will be populated by JavaScript -->
       </div>
       <div style="text-align: center; margin-top: 3rem;">
