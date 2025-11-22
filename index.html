@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DriveEasy - Home</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="container nav-content">
+      <div class="nav-brand">
+        <img src="image/logo.png.png" alt="DriveEasy Logo" style="height: 50px; vertical-align: middle;">
+      </div>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="cars.html">Browse Cars</a></li>
+        <li><a href="booking.html">Book Now</a></li>
+        <li><a href="about.html">About</a></li>
+        <li>
+          <label class="theme-switch">
+            <input type="checkbox" id="darkModeToggle">
+            <span class="slider">
+              <span class="slider-icon">🌙</span>
+            </span>
+          </label>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Rent Cars Hassle-Free</h1>
+      <p>Student-friendly rates • Verified vehicles • 24/7 support</p>
+      <div class="hero-buttons">
+        <a href="cars.html" class="btn btn-primary">🔍 Browse Cars</a>
+        <a href="booking.html" class="btn btn-secondary">📅 Book Now</a>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator">
+      <span>Scroll to explore</span>
+      <div class="scroll-arrow">↓</div>
+    </div>
+  </section>
+
+  <!-- Statistics Section -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-number" data-target="500">0</div>
+          <div class="stat-label">Happy Customers</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" data-target="50">0</div>
+          <div class="stat-label">Premium Cars</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" data-target="15">0</div>
+          <div class="stat-label">Cities Covered</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" data-target="98">0</div>
+          <div class="stat-label">% Satisfaction</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Cars Section -->
+  <section class="featured-cars-section">
+    <div class="container">
+      <h2>Featured Cars</h2>
+      <p class="section-subtitle">Explore our most popular vehicles</p>
+      <div class="featured-cars-grid" id="featuredCars">
+        <!-- Will be populated by JavaScript -->
+      </div>
+      <div style="text-align: center; margin-top: 3rem;">
+        <a href="cars.html" class="btn btn-primary">View All Cars</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Premium Luxury Cars Section -->
+  <section class="premium-cars-section bg-white">
+    <div class="container">
+      <h2>Premium Luxury Collection</h2>
+      <p class="section-subtitle">Experience the ultimate in luxury and comfort</p>
+      <div class="premium-cars-grid" id="premiumCars">
+        <!-- Will be populated by JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section class="how-it-works bg-white">
+    <div class="container">
+      <h2>How It Works</h2>
+      <p class="section-subtitle">Rent a car in 3 simple steps</p>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <div class="step-icon">🔍</div>
+          <h3>Choose Your Car</h3>
+          <p>Browse our wide selection of verified vehicles and pick the perfect one for your journey</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <div class="step-icon">📅</div>
+          <h3>Book Online</h3>
+          <p>Select your dates, provide details, and confirm your booking instantly with secure payment</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <div class="step-icon">🚗</div>
+          <h3>Hit the Road</h3>
+          <p>Pick up your car at the scheduled time and enjoy your hassle-free driving experience</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section class="why-choose-section">
+    <div class="container">
+      <h2>Why Choose DriveEasy?</h2>
+      <p class="section-subtitle">We make car rental simple, safe, and affordable</p>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-icon">✓</div>
+          <h3>100% Verified Cars</h3>
+          <p>All vehicles inspected and certified for safety</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">💰</div>
+          <h3>Student Discounts</h3>
+          <p>Special rates for college students up to 20% off</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔒</div>
+          <h3>Secure Booking</h3>
+          <p>Safe payment and instant confirmation</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📞</div>
+          <h3>24/7 Support</h3>
+          <p>Customer service available anytime</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <h3>Instant Confirmation</h3>
+          <p>Get booking confirmation within seconds</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🎯</div>
+          <h3>Flexible Plans</h3>
+          <p>Daily, weekly, or monthly rental options</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials-section bg-white">
+    <div class="container">
+      <h2>What Our Customers Say</h2>
+      <p class="section-subtitle">Real experiences from real people</p>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p class="testimonial-text">"Amazing service! The booking process was super smooth and the car was in perfect
+            condition. Highly recommend for students!"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">R</div>
+            <div>
+              <div class="author-name">Rahul Sharma</div>
+              <div class="author-title">Engineering Student</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p class="testimonial-text">"Great prices and excellent customer support. The student discount really helped.
+            Will definitely use again for my next trip!"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">P</div>
+            <div>
+              <div class="author-name">Priya Patel</div>
+              <div class="author-title">MBA Student</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p class="testimonial-text">"Professional service from start to finish. The car was clean, well-maintained,
+            and the whole experience was hassle-free!"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">A</div>
+            <div>
+              <div class="author-name">Amit Kumar</div>
+              <div class="author-title">Software Engineer</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Ready to Hit the Road?</h2>
+        <p>Book your perfect car today and enjoy the freedom of the open road</p>
+        <div class="hero-buttons">
+          <a href="booking.html" class="btn btn-primary btn-large">Book Now</a>
+          <a href="cars.html" class="btn btn-secondary btn-large">Browse Cars</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <div>
+        <h4>🚗 DriveEasy</h4>
+        <p>Your trusted car rental platform for students and professionals.</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>Email: info@driveeasy.com</p>
+        <p>Phone: +91 9876543210</p>
+        <p>Address: Bangalore, India</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 DriveEasy - B.Tech Mini Project</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>

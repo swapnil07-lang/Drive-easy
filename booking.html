@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DriveEasy - Book Your Car</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="container nav-content">
+      <div class="nav-brand">
+        <img src="image/logo.png.png" alt="DriveEasy Logo" style="height: 50px; vertical-align: middle;">
+      </div>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cars.html">Browse Cars</a></li>
+        <li><a href="booking.html" class="active">Book Now</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section>
+    <div class="container">
+      <h2>Book Your Car</h2>
+      <form class="booking-form" id="bookingForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Full Name *</label>
+            <input type="text" id="fullName" required />
+          </div>
+          <div class="form-group">
+            <label>Email *</label>
+            <input type="email" id="email" required />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Phone Number *</label>
+            <input type="tel" id="phone" required />
+          </div>
+          <div class="form-group">
+            <label>Select Car *</label>
+            <select id="carSelect" required>
+              <option value="">Choose a car</option>
+              <option value="1500">Honda City - ₹1500/day</option>
+              <option value="1200">Maruti Swift - ₹1200/day</option>
+              <option value="2500">Hyundai Creta - ₹2500/day</option>
+              <option value="3000">Toyota Innova - ₹3000/day</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Pickup Date *</label>
+            <input type="date" id="pickupDate" required />
+          </div>
+          <div class="form-group">
+            <label>Return Date *</label>
+            <input type="date" id="returnDate" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label><input type="checkbox" id="studentDiscount" /> I am a student (20% discount applicable)</label>
+        </div>
+        <div class="pricing-summary" id="pricingSummary" style="display:none;">
+          <h3>Pricing Summary</h3>
+          <div class="price-row"><span>Duration:</span> <span id="durationDays">0 days</span></div>
+          <div class="price-row"><span>Base Price:</span> <span id="basePrice">₹0</span></div>
+          <div class="price-row" id="discountRow" style="display:none;">
+            <span>Student Discount (20%):</span> <span id="discountAmount">-₹0</span>
+          </div>
+          <div class="price-row total"><span>Total Amount:</span> <span id="totalPrice">₹0</span></div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full-width">Confirm Booking</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Confirmation Modal -->
+  <div id="confirmationModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <div class="modal-icon">✓</div>
+      <h2>Booking Confirmed!</h2>
+      <p>Thank you for choosing DriveEasy. Your booking has been confirmed.</p>
+      <div id="bookingDetails" style="text-align: left; margin: 1rem 0;"></div>
+      <button class="btn btn-primary" onclick="closeModal()">Close</button>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <div>
+        <h4>🚗 DriveEasy</h4>
+        <p>Your trusted car rental platform.</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>Email: info@driveeasy.com</p>
+        <p>Phone: +91 9876543210</p>
+      </div>
+    </div>
+    <div class="footer-bottom">&copy; 2025 DriveEasy - B.Tech Mini Project</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

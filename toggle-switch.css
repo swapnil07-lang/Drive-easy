@@ -1,0 +1,73 @@
+﻿/* ===============================
+   THEME TOGGLE SWITCH
+   =============================== */
+.theme-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+}
+
+.theme-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+    transition: 0.4s;
+    border-radius: 30px;
+    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.slider-icon {
+    position: absolute;
+    top: 50%;
+    left: 8px;
+    transform: translateY(-50%);
+    font-size: 14px;
+    transition: 0.4s;
+    z-index: 1;
+}
+
+input:checked + .slider {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+}
+
+input:checked + .slider:before {
+    transform: translateX(30px);
+}
+
+input:checked + .slider .slider-icon {
+    left: auto;
+    right: 8px;
+}
+
+.slider:hover {
+    box-shadow: 0 6px 20px rgba(99, 102, 241, 0.5);
+}
+
+/* Remove old dark mode toggle button styles */
+.dark-mode-toggle {
+    display: none;
+}

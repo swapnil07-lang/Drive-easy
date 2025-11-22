@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DriveEasy - Browse Cars</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="container nav-content">
+      <div class="nav-brand">
+        <img src="image/logo.png.png" alt="DriveEasy Logo" style="height: 50px; vertical-align: middle;">
+      </div>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cars.html" class="active">Browse Cars</a></li>
+        <li><a href="booking.html">Book Now</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section>
+    <div class="container">
+      <h2>Browse Our Fleet</h2>
+      <div class="car-grid" id="carGrid">
+        <!-- Cars populated by JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <div>
+        <h4>🚗 DriveEasy</h4>
+        <p>Your trusted car rental platform.</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>Email: info@driveeasy.com</p>
+        <p>Phone: +91 9876543210</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 DriveEasy - B.Tech Mini Project</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // Populate cars on this page
+    window.onload = () => loadCars();
+  </script>
+</body>
+
+</html>
