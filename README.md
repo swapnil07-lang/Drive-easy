@@ -202,7 +202,7 @@ body.dark-mode {
 - ✅ Safari (latest)
 - ✅ Edge (latest)
 - ✅ Opera (latest)
-
+- ✅ Brave (latest)
 ## 📈 Performance
 
 - **Lighthouse Score**: 95+
