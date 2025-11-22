@@ -233,7 +233,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## 👨‍💻 Author
 
-**Swapnil**
+**Swapnil Gaur**
 - GitHub: [@swapnil07-lang](https://github.com/swapnil07-lang)
 - Project: [Drive-easy](https://github.com/swapnil07-lang/Drive-easy)
 
