@@ -19,6 +19,14 @@
         <li><a href="cars.html">Browse Cars</a></li>
         <li><a href="booking.html" class="active">Book Now</a></li>
         <li><a href="about.html">About</a></li>
+        <li>
+          <label class="theme-switch">
+            <input type="checkbox" id="darkModeToggle">
+            <span class="slider">
+              <span class="slider-icon">🌙</span>
+            </span>
+          </label>
+        </li>
       </ul>
     </div>
   </nav>
@@ -46,10 +54,7 @@
             <label>Select Car *</label>
             <select id="carSelect" required>
               <option value="">Choose a car</option>
-              <option value="1500">Honda City - ₹1500/day</option>
-              <option value="1200">Maruti Swift - ₹1200/day</option>
-              <option value="2500">Hyundai Creta - ₹2500/day</option>
-              <option value="3000">Toyota Innova - ₹3000/day</option>
+              <!-- Will be populated by JavaScript -->
             </select>
           </div>
         </div>
@@ -63,8 +68,9 @@
             <input type="date" id="returnDate" required />
           </div>
         </div>
-        <div class="form-group">
-          <label><input type="checkbox" id="studentDiscount" /> I am a student (20% discount applicable)</label>
+        <div class="form-group checkbox-group">
+          <input type="checkbox" id="studentDiscount" />
+          <label for="studentDiscount">I am a student (20% discount applicable)</label>
         </div>
         <div class="pricing-summary" id="pricingSummary" style="display:none;">
           <h3>Pricing Summary</h3>

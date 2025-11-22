@@ -666,6 +666,35 @@ section h2::after {
     margin-top: 1rem;
 }
 
+/* Checkbox Styling */
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.checkbox-group label {
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--text-medium);
+    margin-bottom: 0;
+    transition: color 0.3s ease;
+}
+
+.checkbox-group:hover label {
+    color: var(--text-dark);
+}
+
+
 /* ===============================
    MODAL
    =============================== */
@@ -1427,7 +1456,8 @@ section h2::after {
         .cta-content h2 {
             font-size: 1.8rem;
         }
-    }}
+    }
+}
 
 /* ===============================
    PREMIUM LUXURY CARS SECTION
@@ -1495,8 +1525,15 @@ section h2::after {
 }
 
 @keyframes float-luxury {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-20px); }
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
 }
 
 .premium-placeholder p {
@@ -1652,6 +1689,7 @@ body.dark-mode .bg-white {
 body.dark-mode .footer {
     background: linear-gradient(135deg, #0f0f1e 0%, #000000 100%);
 }
+
 /* ===============================
    THEME TOGGLE SWITCH
    =============================== */
@@ -1704,15 +1742,15 @@ body.dark-mode .footer {
     z-index: 1;
 }
 
-input:checked + .slider {
+input:checked+.slider {
     background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
 }
 
-input:checked + .slider:before {
+input:checked+.slider:before {
     transform: translateX(30px);
 }
 
-input:checked + .slider .slider-icon {
+input:checked+.slider .slider-icon {
     left: auto;
     right: 8px;
 }

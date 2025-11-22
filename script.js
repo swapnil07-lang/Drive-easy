@@ -226,10 +226,42 @@ function loadPremiumCars() {
     `).join('');
 }
 
+// Populate car dropdown in booking form
+function populateCarDropdown() {
+    const carSelect = document.getElementById('carSelect');
+    if (!carSelect) return;
+
+    // Clear existing options except the first one
+    carSelect.innerHTML = '<option value="">Choose a car</option>';
+
+    // Add standard cars
+    cars.forEach(car => {
+        const option = document.createElement('option');
+        option.value = car.price;
+        option.textContent = `${car.name} - ₹${car.price.toLocaleString()}/day`;
+        carSelect.appendChild(option);
+    });
+
+    // Add a separator
+    const separator = document.createElement('option');
+    separator.disabled = true;
+    separator.textContent = '─────── Premium Luxury ───────';
+    carSelect.appendChild(separator);
+
+    // Add premium cars
+    premiumCars.forEach(car => {
+        const option = document.createElement('option');
+        option.value = car.price;
+        option.textContent = `${car.name} - ₹${car.price.toLocaleString()}/day 👑`;
+        carSelect.appendChild(option);
+    });
+}
+
 // Initialize homepage features
 window.addEventListener('DOMContentLoaded', () => {
     loadFeaturedCars();
     loadPremiumCars();
+    populateCarDropdown();
 });
 
 // ===============================
