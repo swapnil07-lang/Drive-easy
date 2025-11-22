@@ -10,10 +10,10 @@ const cars = [
 
 // Premium Luxury Cars
 const premiumCars = [
-    { name: 'Range Rover Vogue', price: 12000, seats: 5, transmission: 'Automatic', fuel: 'Petrol', features: ['Premium Leather', 'Panoramic Sunroof', 'Massage Seats', 'Advanced Driver Assist'], image: 'image/range-rover.png', category: 'premium' },
-    { name: 'Rolls Royce Phantom', price: 15000, seats: 5, transmission: 'Automatic', fuel: 'Petrol', features: ['Starlight Headliner', 'Champagne Cooler', 'Rear Entertainment', 'Bespoke Interior'], image: 'image/rolls-royce.png', category: 'premium' },
-    { name: 'Mercedes S-Class', price: 10000, seats: 5, transmission: 'Automatic', fuel: 'Petrol', features: ['Executive Seats', 'Burmester Sound', 'Air Suspension', 'Night Vision'], image: 'image/mercedes-s.png', category: 'premium' },
-    { name: 'BMW 7 Series', price: 9500, seats: 5, transmission: 'Automatic', fuel: 'Diesel', features: ['Gesture Control', 'Laser Headlights', 'Sky Lounge', 'Executive Lounge'], image: 'image/bmw-7.png', category: 'premium' }
+    { name: 'Range Rover Vogue', price: 12000, seats: 5, transmission: 'Automatic', fuel: 'Petrol', features: ['Premium Leather', 'Panoramic Sunroof', 'Massage Seats', 'Advanced Driver Assist'], image: 'image/range rover vogue.webp', category: 'premium' },
+    { name: 'Rolls Royce Phantom', price: 15000, seats: 5, transmission: 'Automatic', fuel: 'Petrol', features: ['Starlight Headliner', 'Champagne Cooler', 'Rear Entertainment', 'Bespoke Interior'], image: 'image/Rolls-Royce Phantom Tempus-11.webp', category: 'premium' },
+    { name: 'Mercedes S-Class', price: 10000, seats: 5, transmission: 'Automatic', fuel: 'Petrol', features: ['Executive Seats', 'Burmester Sound', 'Air Suspension', 'Night Vision'], image: 'image/mercedes s class.webp', category: 'premium' },
+    { name: 'BMW 7 Series', price: 9500, seats: 5, transmission: 'Automatic', fuel: 'Diesel', features: ['Gesture Control', 'Laser Headlights', 'Sky Lounge', 'Executive Lounge'], image: 'image/BMW 7 series.webp', category: 'premium' }
 ];
 
 // Load cars into carGrid element in cars.html  
@@ -207,10 +207,7 @@ function loadPremiumCars() {
         <div class="car-card premium-car-card">
             <div class="premium-badge">LUXURY</div>
             <div class="car-image premium-car-image">
-                <div class="premium-placeholder">
-                    <span class="luxury-icon">👑</span>
-                    <p>${car.name}</p>
-                </div>
+                <img src="${car.image}" alt="${car.name}" />
             </div>
             <div class="car-details">
                 <h3 class="car-name">${car.name}</h3>
